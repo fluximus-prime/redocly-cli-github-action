@@ -1,4 +1,4 @@
-FROM shesse/redoc-cli:1.0.1
+FROM ghcr.io/redocly/redoc/cli:latest
 
 COPY LICENSE README.md /
 
