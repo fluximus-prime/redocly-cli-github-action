@@ -1,6 +1,6 @@
 # redoc-cli-github-action
 
-This action lets you use the [redoc-cli](https://github.com/Redocly/redoc/blob/master/cli/README.md) to generate a HTML version of your OpenAPI documents.
+This action lets you use the latest version of [redoc-cli](https://github.com/Redocly/redoc/blob/master/cli/README.md) to generate a HTML version of your OpenAPI documents.
 
 ## Inputs
 
