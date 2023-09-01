@@ -8,16 +8,16 @@ on:
 jobs:
   test_job:
     runs-on: ubuntu-latest
-    name: Testing private usage
+    name: Testing Private Usage
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: redoc-cli test
+      - name: Redocly CLI Test
         uses: ./ # Uses an action in the root directory
         with:
-          args: 'bundle test/petstore.yml -o petstore.html'
+          args: 'build-docs test/petstore.yml --output ./petstore.html'
 
       - name: check result
         run: |
@@ -26,16 +26,16 @@ jobs:
 
   test_job_2:
     runs-on: ubuntu-latest
-    name: Testing public name
+    name: Testing Public Usage
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # use the public name of the action
-      - name: redoc-cli test
-        uses: seeebiii/redoc-cli-github-action@v10
+      - name: Redocly CLI Test
+        uses: fluximus-prime/redocly-cli-github-action@v1
         with:
-          args: 'bundle test/petstore.yml -o petstore.html'
+          args: 'build-docs test/petstore.yml --output ./petstore.html'
 
       - name: check result
         run: |

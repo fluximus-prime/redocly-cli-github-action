@@ -1,12 +1,12 @@
-name: 'redoc-cli-github-action-latest'
-description: 'Lets you use redoc-cli for generating REST API docs of your OpenAPI documents.'
-author: 'Sebastian Hesse <info@sebastianhesse.de>'
+name: 'redocly-cli-github-action'
+description: 'Use Redocly CLI to work with OpenAPI Specification (OAS) files and make API docs, convert YAML and JSON, bundle multi-file specs, lint, join and more.'
+author: 'Sebastian Hesse <info@sebastianhesse.de>, kefasjw, fluximus-prime'
 branding:
   icon: 'book'
   color: 'green'
 inputs:
   args:
-    description: 'The arguments to pass over to redoc-cli'
+    description: 'The arguments to pass over to Redocly CLI'
     required: false
     default: ''
 runs:

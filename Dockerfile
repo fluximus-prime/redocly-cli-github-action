@@ -1,7 +1,8 @@
-FROM ghcr.io/redocly/redoc/cli:latest
+FROM ghcr.io/redocly/cli:latest
 
 COPY LICENSE README.md /
 
-COPY generate-docs.sh /generate-docs.sh
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/generate-docs.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
