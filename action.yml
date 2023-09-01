@@ -1,5 +1,5 @@
 name: 'redocly-cli-github-action'
-description: 'Use Redocly CLI to work with OpenAPI Specification (OAS) files and make API docs, convert YAML and JSON, bundle multi-file specs, lint, join and more.'
+description: 'Use Redocly CLI & OpenAPI Specification (OAS) files to make API docs, convert YAML & JSON, bundle, lint, join specs & more.'
 author: 'Sebastian Hesse <info@sebastianhesse.de>, kefasjw, fluximus-prime'
 branding:
   icon: 'book'
