@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v3
 
       # then use redocly-cli-github-action
-      - name: redocly cli test
+      - name: Redocly CLI Test
         uses: fluximus-prime/redocly-cli-github-action@v1
         with:
           args: 'build-docs test/petstore.yml'
