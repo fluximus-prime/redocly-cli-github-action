@@ -44,7 +44,7 @@ Alternatively you can point it to a file under a certain URL.
 
 ```yaml
 - name: redocly cli test
-  uses: fluximus-prime/redocly-cli-github-action@master
+  uses: fluximus-prime/redocly-cli-github-action@v1
   with:
     args: 'build-docs https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml'
 ```
@@ -58,6 +58,13 @@ If you need to specify a custom name and destination for the output file, use th
     args: 'build-docs test/petstore.yml --output petstore.html'
 ```
 
+Output files will be [owned by `root`](https://docs.github.com/en/actions/creating-actions/dockerfile-support-for-github-actions#user).
+Files created by Redocly CLI may not be accessible by other steps unless the ownership is changed.
+
+```yaml
+- name: Change File Ownership
+  run: sudo chown --recursive --preserve-root --verbose runner:docker ./petstore.html
+```
 
 ## License
 
